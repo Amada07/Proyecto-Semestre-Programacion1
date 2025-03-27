@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets.LoginController">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="101.0" prefWidth="612.0" style="-fx-background-color: #745cb4;">
+         <children>
+            <Label layoutX="242.0" layoutY="32.0" prefHeight="37.0" prefWidth="128.0" text="LOGIN" textFill="#fcfcfc">
+               <font>
+                  <Font name="Elephant" size="29.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="-1.0" layoutY="100.0" prefHeight="369.0" prefWidth="610.0" style="-fx-background-color: #fcfdff;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="230.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/imagen%20azul.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="197.0" text="Tipo">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="279.0" text="Contraseña">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="238.0" text="Usuario">
+               <font>
+                  <Font name="Elephant" size="17.0" />
+               </font>
+            </Label>
+            <TextField layoutX="194.0" layoutY="237.0" prefHeight="25.0" prefWidth="255.0" promptText="nombre" />
+            <TextField layoutX="195.0" layoutY="278.0" prefHeight="25.0" prefWidth="255.0" promptText="contraseña" />
+            <Button layoutX="257.0" layoutY="322.0" mnemonicParsing="false" text="Iniciar Sesion">
+               <font>
+                  <Font name="Elephant" size="13.0" />
+               </font>
+            </Button>
+            <ComboBox layoutX="195.0" layoutY="185.0" prefHeight="25.0" prefWidth="255.0" promptText="seleccionar" />
+         </children></Pane>
+   </children>
+</AnchorPane>
