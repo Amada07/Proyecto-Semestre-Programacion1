@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="546.0" prefWidth="762.0" style="-fx-background-color: #24d6bf;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistematickets.MenuPrincipalController">
+   <children>
+      <TabPane layoutY="-3.0" prefHeight="553.0" prefWidth="762.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Configuracion del Sistema">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="747.0">
+                     <children>
+                        <Pane layoutX="-3.0" prefHeight="525.0" prefWidth="770.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label layoutX="126.0" layoutY="182.0" text="Nombre Empresa">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="89.0" layoutY="213.0" prefHeight="25.0" prefWidth="207.0" promptText="Nombre Empresa" text="                     TicketPro">
+                                 <font>
+                                    <Font name="Constantia Bold" size="13.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="124.0" fitWidth="164.0" layoutX="287.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Imagenes/logo1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="113.0" layoutY="292.0" text="Zona Horaria">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox layoutX="71.0" layoutY="329.0" prefHeight="25.0" prefWidth="188.0" promptText="Ingrese la zona horaria" />
+                              <ComboBox layoutX="437.0" layoutY="213.0" prefHeight="25.0" prefWidth="190.0" promptText="Ingrese el idioma" />
+                              <Label layoutX="514.0" layoutY="182.0" text="Idioma">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="291.0" layoutY="292.0" text="Tiempo de Vencimiento ">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Spinner layoutX="285.0" layoutY="329.0" prefHeight="25.0" prefWidth="191.0" />
+                              <Label layoutX="542.0" layoutY="292.0" text="Lista de Prioridad">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox layoutX="514.0" layoutY="329.0" prefHeight="25.0" prefWidth="194.0" promptText="Ingrese la prioridad" />
+                              <Button layoutX="358.0" layoutY="419.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="95.0" text="Guardar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="183.0" layoutY="419.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Modificar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="532.0" layoutY="426.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" text="Almacenar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Gestionar Roles y Permisos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="524.0" prefWidth="762.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Label layoutX="110.0" layoutY="58.0" text="Nombre Del Rol">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font></Label>
+                              <Label layoutX="102.0" layoutY="144.0" text="Descripcion del Rol">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font></Label>
+                              <Label layoutX="104.0" layoutY="21.0" text="Creacion de Roles ">
+                                 <font>
+                                    <Font name="Elephant" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="513.0" layoutY="58.0" text="Nombre Del Permiso">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font></Label>
+                              <Label layoutX="503.0" layoutY="144.0" text="Descripcion del permiso">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font></Label>
+                              <TextField layoutX="60.0" layoutY="86.0" prefHeight="25.0" prefWidth="214.0" />
+                              <TextArea layoutX="57.0" layoutY="169.0" prefHeight="61.0" prefWidth="229.0" />
+                              <Label layoutX="495.0" layoutY="21.0" text="Creacion de Permisos">
+                                 <font>
+                                    <Font name="Elephant" size="16.0" />
+                                 </font></Label>
+                              <TextArea layoutX="446.0" layoutY="173.0" prefHeight="52.0" prefWidth="271.0" />
+                              <Button layoutX="36.0" layoutY="278.0" mnemonicParsing="false" text="Crear ">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font></Button>
+                              <TextField layoutX="462.0" layoutY="86.0" prefHeight="25.0" prefWidth="225.0" />
+                              <Separator layoutX="368.0" layoutY="2.0" orientation="VERTICAL" prefHeight="521.0" prefWidth="0.0" />
+                              <Separator layoutY="329.0" prefHeight="12.0" prefWidth="762.0" />
+                              <Button layoutX="102.0" layoutY="278.0" mnemonicParsing="false" text="Modificar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font></Button>
+                              <Button layoutX="193.0" layoutY="278.0" mnemonicParsing="false" text="Guardar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="274.0" layoutY="278.0" mnemonicParsing="false" text="Eliminar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="425.0" layoutY="278.0" mnemonicParsing="false" text="Crear">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="495.0" layoutY="278.0" mnemonicParsing="false" text="Modificar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="582.0" layoutY="278.0" mnemonicParsing="false" text="Guardar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="668.0" layoutY="278.0" mnemonicParsing="false" text="Eliminar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="97.0" layoutY="361.0" text="Roles Existentes ">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="503.0" layoutY="341.0" text="Permisos Existentes">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton layoutX="83.0" layoutY="398.0" mnemonicParsing="false" text="Administrador">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="82.0" layoutY="432.0" mnemonicParsing="false" text="Usuario">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="82.0" layoutY="462.0" mnemonicParsing="false" text="Tecnico">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="378.0" layoutY="372.0" mnemonicParsing="false" text="Crear Tickets">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="379.0" layoutY="407.0" mnemonicParsing="false" text="Ver Tickets">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="377.0" layoutY="441.0" mnemonicParsing="false" text="Editar Tickets">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="509.0" layoutY="372.0" mnemonicParsing="false" text="Eliminar Tickets">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="511.0" layoutY="407.0" mnemonicParsing="false" text="Asignar Tickets">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="509.0" layoutY="441.0" mnemonicParsing="false" text="Cambiar Estado ">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="637.0" layoutY="372.0" mnemonicParsing="false" text="Agregar notas">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="633.0" layoutY="407.0" mnemonicParsing="false" text="Usuarios">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="635.0" layoutY="441.0" mnemonicParsing="false" text="Departamentos">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="402.0" layoutY="481.0" mnemonicParsing="false" text="Gestios Flujos de trabajo ">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton layoutX="617.0" layoutY="481.0" mnemonicParsing="false" text="Sistema">
+                                 <font>
+                                    <Font name="Copperplate Gothic Bold" size="11.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Registrar Usuarios">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutY="-1.0" prefHeight="526.0" prefWidth="762.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Label layoutX="87.0" layoutY="44.0" />
+                              <Label layoutX="192.0" layoutY="44.0" text="Tipo de Usuario ">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="499.0" layoutY="36.0" text="ID">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="133.0" layoutY="162.0" text="Nombre Completo ">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="428.0" prefHeight="17.0" prefWidth="762.0" />
+                              <Label layoutX="132.0" layoutY="217.0" text="Nombre de Usuario">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="155.0" layoutY="268.0" text="Contraseña">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="171.0" layoutY="324.0" text="Email">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="147.0" layoutY="374.0" text="Departamento">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="92.0" layoutY="461.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Registrar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="200.0" layoutY="462.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="Habilitar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="307.0" layoutY="462.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" text="Desactivar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="422.0" layoutY="462.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="77.0" text="Guardar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <TextField layoutX="431.0" layoutY="70.0" />
+                              <TextField layoutX="298.0" layoutY="158.0" prefHeight="25.0" prefWidth="227.0" promptText="Ingrese su nombre completo" />
+                              <TextField layoutX="298.0" layoutY="213.0" prefHeight="25.0" prefWidth="230.0" promptText="Ingrese su nombre de usuario" />
+                              <TextField layoutX="298.0" layoutY="320.0" prefHeight="25.0" prefWidth="235.0" promptText="   Ingrese su Email" />
+                              <ComboBox layoutX="164.0" layoutY="70.0" prefHeight="25.0" prefWidth="201.0" promptText="Seleccione el tipo de usuario" />
+                              <PasswordField layoutX="298.0" layoutY="264.0" prefHeight="25.0" prefWidth="234.0" promptText="Ingrese su contraseña" />
+                              <Button layoutX="521.0" layoutY="461.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Eliminar">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="624.0" layoutY="461.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Historial">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox layoutX="298.0" layoutY="371.0" prefHeight="25.0" prefWidth="237.0" promptText="Seleccione el departamento" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Tickets">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="525.0" prefWidth="762.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Label layoutX="112.0" layoutY="52.0" text="No.Ticket">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="109.0" layoutY="110.0" text="Solicitante">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="118.0" layoutY="169.0" text="Estado">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font></Label>
+                              <Separator layoutX="7.0" layoutY="416.0" prefHeight="0.0" prefWidth="755.0" />
+                              <Label layoutX="95.0" layoutY="226.0" text="Departamento">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="115.0" layoutY="294.0" text="Tecnico">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="226.0" layoutY="49.0" prefHeight="25.0" prefWidth="219.0" />
+                              <TextField layoutX="226.0" layoutY="109.0" prefHeight="25.0" prefWidth="221.0" />
+                              <TextField layoutX="226.0" layoutY="291.0" prefHeight="25.0" prefWidth="223.0" />
+                              <TextField layoutX="226.0" layoutY="223.0" prefHeight="25.0" prefWidth="222.0" />
+                              <ComboBox layoutX="226.0" layoutY="166.0" prefHeight="25.0" prefWidth="220.0" />
+                              <Label layoutX="580.0" layoutY="30.0" text="Descripcion">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="602.0" layoutY="236.0" text="Nota">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextArea layoutX="520.0" layoutY="61.0" prefHeight="117.0" prefWidth="200.0" />
+                              <TextArea layoutX="520.0" layoutY="263.0" prefHeight="122.0" prefWidth="200.0" />
+                              <Button layoutX="160.0" layoutY="441.0" mnemonicParsing="false" text="Crear">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="262.0" layoutY="440.0" mnemonicParsing="false" text="Modificar">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="376.0" layoutY="441.0" mnemonicParsing="false" text="Buscar">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="471.0" layoutY="441.0" mnemonicParsing="false" text="Eliminar">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="581.0" layoutY="441.0" mnemonicParsing="false" text="Asignar">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Departamentos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutY="-5.0" prefHeight="534.0" prefWidth="762.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Label layoutX="491.0" layoutY="55.0" text="Nombre del Departamento">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="76.0" layoutY="55.0" text="Tipo de Usuario">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="124.0" layoutY="180.0" text="Descripcion">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="305.0" layoutY="55.0" text="ID Departamento">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font></Label>
+                              <ComboBox layoutX="41.0" layoutY="87.0" prefHeight="25.0" prefWidth="190.0" />
+                              <TextField layoutX="279.0" layoutY="87.0" prefHeight="25.0" prefWidth="183.0" />
+                              <TextField layoutX="485.0" layoutY="87.0" prefHeight="25.0" prefWidth="214.0" />
+                              <TextArea layoutX="56.0" layoutY="214.0" prefHeight="144.0" prefWidth="242.0" />
+                              <Button layoutX="96.0" layoutY="457.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="177.0" text="Crear Departamentos ">
+                                 <font>
+                                    <Font name="Elephant" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="305.0" layoutY="455.0" mnemonicParsing="false" text="Modificar">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="430.0" layoutY="454.0" mnemonicParsing="false" text="Guardar">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Separator layoutY="404.0" prefHeight="9.0" prefWidth="762.0" />
+                              <Button layoutX="562.0" layoutY="455.0" mnemonicParsing="false" text="Eliminar">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="485.0" layoutY="180.0" text="Tecnico Asignado">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextArea layoutX="451.0" layoutY="214.0" prefHeight="145.0" prefWidth="200.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Estados">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Flujos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
