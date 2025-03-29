@@ -535,7 +535,49 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Pane layoutY="1.0" prefHeight="523.0" prefWidth="762.0" style="-fx-background-color: #ADD8E6;" />
+                        <Pane layoutY="1.0" prefHeight="523.0" prefWidth="762.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Label layoutX="114.0" layoutY="46.0" text="Nombre Flujo">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="119.0" layoutY="113.0" text="Estados">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="118.0" layoutY="179.0" text="Transiciones">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="121.0" layoutY="243.0" text="Descripcion">
+                                 <font>
+                                    <Font name="Elephant" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="262.0" layoutY="42.0" prefHeight="25.0" prefWidth="229.0" />
+                              <TextArea layoutX="103.0" layoutY="270.0" prefHeight="109.0" prefWidth="575.0" />
+                              <ComboBox layoutX="262.0" layoutY="109.0" prefHeight="25.0" prefWidth="225.0" />
+                              <ComboBox layoutX="263.0" layoutY="175.0" prefHeight="25.0" prefWidth="227.0" />
+                              <Button layoutX="179.0" layoutY="445.0" mnemonicParsing="false" text="Crear Nuevo Flujo">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="346.0" layoutY="445.0" mnemonicParsing="false" text="Modificar Flujo">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="491.0" layoutY="445.0" mnemonicParsing="false" text="Eliminar Flujo">
+                                 <font>
+                                    <Font name="Elephant" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
                      </children>
                   </AnchorPane>
               </content>
