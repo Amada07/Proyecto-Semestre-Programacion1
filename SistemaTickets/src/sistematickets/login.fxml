@@ -49,7 +49,7 @@
                   <Font name="Elephant" size="13.0" />
                </font>
             </Button>
-            <ComboBox fx:id="comboBoxtipo" layoutX="195.0" layoutY="185.0" prefHeight="25.0" prefWidth="255.0" promptText="seleccionar" />
+            <ComboBox fx:id="cmbTipoUsuario" layoutX="195.0" layoutY="185.0" prefHeight="25.0" prefWidth="255.0" promptText="seleccionar" />
           </children>
       </Pane>
    </children>

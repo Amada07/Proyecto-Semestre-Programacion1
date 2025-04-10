@@ -17,10 +17,12 @@ import javafx.scene.control.ComboBox;
  */
 public class LoginController implements Initializable {
     
+   @FXML
+   private ComboBox<String> cmbTipoUsuario;
    
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-    
+    public void initialize(URL location, ResourceBundle resources) {
+    cmbTipoUsuario.getItems().addAll("Administrador","Tecnico","Usuario");
     }    
     
 }
