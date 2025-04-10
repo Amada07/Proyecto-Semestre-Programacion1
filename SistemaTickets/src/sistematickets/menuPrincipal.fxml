@@ -379,7 +379,6 @@
                                  </font>
                               </Label>
                               <TextArea layoutX="520.0" layoutY="61.0" prefHeight="117.0" prefWidth="200.0" />
-                              <TextArea layoutX="520.0" layoutY="263.0" prefHeight="122.0" prefWidth="200.0" />
                               <Button layoutX="160.0" layoutY="441.0" mnemonicParsing="false" text="Crear">
                                  <font>
                                     <Font name="Elephant" size="14.0" />
@@ -405,6 +404,7 @@
                                     <Font name="Elephant" size="14.0" />
                                  </font>
                               </Button>
+                              <TextArea layoutX="520.0" layoutY="263.0" prefHeight="139.0" prefWidth="200.0" />
                            </children>
                         </Pane>
                      </children>
