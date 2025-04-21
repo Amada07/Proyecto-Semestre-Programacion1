@@ -22,7 +22,7 @@
    <children>
       <TabPane layoutY="-3.0" prefHeight="553.0" prefWidth="762.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Configuracion del Sistema">
+          <Tab fx:id="tabConfigSistema" text="Configuracion del Sistema">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="747.0">
                      <children>
@@ -88,7 +88,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Registrar Usuarios">
+          <Tab fx:id="tabRegistrarUsuarios" text="Registrar Usuarios">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -174,7 +174,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab text="Gestionar Roles y Permisos">
+            <Tab fx:id="tabRolesPermisos" text="Gestionar Roles y Permisos">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -334,7 +334,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Tickets">
+            <Tab fx:id="tabTickets" text="Tickets">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -411,7 +411,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Departamentos">
+            <Tab fx:id="tabDepartamentos" text="Departamentos">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -474,7 +474,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Estados">
+            <Tab fx:id="tabEstados" text="Estados">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -531,7 +531,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Flujos">
+            <Tab fx:id="tabFlujos" text="Flujos">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

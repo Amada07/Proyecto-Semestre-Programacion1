@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -42,14 +43,14 @@
                   <Font name="Elephant" size="17.0" />
                </font>
             </Label>
-            <TextField layoutX="194.0" layoutY="237.0" prefHeight="25.0" prefWidth="255.0" promptText="nombre" />
-            <TextField layoutX="195.0" layoutY="278.0" prefHeight="25.0" prefWidth="255.0" promptText="contraseña" />
-            <Button layoutX="257.0" layoutY="322.0" mnemonicParsing="false" text="Iniciar Sesion">
+            <TextField fx:id="txtUsuario" layoutX="194.0" layoutY="237.0" prefHeight="25.0" prefWidth="255.0" promptText="Nombre" />
+            <Button fx:id="btnIniciarSesion" layoutX="257.0" layoutY="322.0" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar Sesion">
                <font>
                   <Font name="Elephant" size="13.0" />
                </font>
             </Button>
             <ComboBox fx:id="cmbTipoUsuario" layoutX="195.0" layoutY="185.0" prefHeight="25.0" prefWidth="255.0" promptText="seleccionar" />
+            <PasswordField fx:id="txtContraseña" layoutX="195.0" layoutY="278.0" prefHeight="25.0" prefWidth="255.0" promptText="Contraseña" />
           </children>
       </Pane>
    </children>

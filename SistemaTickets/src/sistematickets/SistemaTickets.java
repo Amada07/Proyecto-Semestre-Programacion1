@@ -21,12 +21,15 @@ public class SistemaTickets extends Application {
     /**
      * @param args the command line arguments
      */
+    
     @Override
     public void start (Stage primaryStage) throws IOException  {
     Parent root = FXMLLoader.load(getClass().getResource("/sistematickets/login.fxml"));
         
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root));
+        
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Sistema de Tickets");
         primaryStage.show();
     }
     
