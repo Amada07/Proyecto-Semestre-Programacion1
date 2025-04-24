@@ -80,7 +80,7 @@ public class LoginController implements Initializable {
             controller.ajustarTabsPorRol(tipoUsuario);
 
             
-           //se un stage para que abra la ventana de stage 
+           //se un stage para que abra la ventana del Menu Principal
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setTitle("Menú Principal - " + tipoUsuario);

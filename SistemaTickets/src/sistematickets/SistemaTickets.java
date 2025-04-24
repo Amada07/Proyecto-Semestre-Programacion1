@@ -12,6 +12,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
+
 /**
  *
  * @author Amada
@@ -24,9 +26,8 @@ public class SistemaTickets extends Application {
     
     @Override
     public void start (Stage primaryStage) throws IOException  {
+   
     Parent root = FXMLLoader.load(getClass().getResource("/sistematickets/login.fxml"));
-        
-        
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Sistema de Tickets");
@@ -34,6 +35,8 @@ public class SistemaTickets extends Application {
     }
     
    public static void main(String []args){
+       ConexionDB conexion = new ConexionDB();
+       conexion.getConnection();
        launch (args);
    } 
 }
