@@ -152,11 +152,11 @@
                                  </font>
                               </Button>
                               <TextField layoutX="431.0" layoutY="70.0" />
-                              <TextField layoutX="298.0" layoutY="158.0" prefHeight="25.0" prefWidth="227.0" promptText="Ingrese su nombre completo" />
+                              <TextField fx:id="txtnombre" layoutX="298.0" layoutY="158.0" prefHeight="25.0" prefWidth="227.0" promptText="Ingrese su nombre completo" />
                               <TextField layoutX="298.0" layoutY="213.0" prefHeight="25.0" prefWidth="230.0" promptText="Ingrese su nombre de usuario" />
                               <TextField layoutX="298.0" layoutY="320.0" prefHeight="25.0" prefWidth="235.0" promptText="   Ingrese su Email" />
                               <ComboBox layoutX="164.0" layoutY="70.0" prefHeight="25.0" prefWidth="201.0" promptText="Seleccione el tipo de usuario" />
-                              <PasswordField layoutX="298.0" layoutY="264.0" prefHeight="25.0" prefWidth="234.0" promptText="Ingrese su contraseña" />
+                              <PasswordField fx:id="txtcorreo" layoutX="298.0" layoutY="264.0" prefHeight="25.0" prefWidth="234.0" promptText="Ingrese su contraseña" />
                               <Button layoutX="521.0" layoutY="461.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Eliminar">
                                  <font>
                                     <Font name="Elephant" size="13.0" />
