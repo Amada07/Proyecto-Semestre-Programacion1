@@ -16,14 +16,16 @@ import java.sql.SQLException;
  */
 
 public class ConexionDB {
-private static final String url = "jdbc:postgresql://localhost:5432/sistema_tickets";
-private static final String user= "postgres";
-private static final String password= "#basededatos721";
+private static final String url = "jdbc:postgresql://ep-still-glade-a4lsy7k3-pooler.us-east-1.aws.neon.tech:5432/chinook";
+private static final String user= "neondb_owner";
+private static final String password= "npg_gRyh2lnqawv7";
  
     public  Connection getConnection() {
-        Connection conexion = null;
+        
         try {
-          return DriverManager.getConnection(url, user, password);
+          Connection conexion = DriverManager.getConnection(url, user, password);
+          System.out.println("Conexion exitosa a la base de datos");
+          return conexion;
         } catch (SQLException e) {
         System.out.println("Eror de conexion:"+ e.getMessage());
         }
