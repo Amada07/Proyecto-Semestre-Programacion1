@@ -20,15 +20,21 @@ private static final String url = "jdbc:postgresql://ep-still-glade-a4lsy7k3-poo
 private static final String user= "neondb_owner";
 private static final String password= "npg_gRyh2lnqawv7";
  
-    public  Connection getConnection() {
-        
+    public  static Connection obtenerConexion()  {
+       Connection conexion = null;
+   
         try {
-          Connection conexion = DriverManager.getConnection(url, user, password);
+   
+          conexion = DriverManager.getConnection(url, user, password);
           System.out.println("Conexion exitosa a la base de datos");
           return conexion;
         } catch (SQLException e) {
         System.out.println("Eror de conexion:"+ e.getMessage());
         }
         return null;
+        
+        
+  
+
     }
 } 

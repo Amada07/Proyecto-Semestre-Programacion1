@@ -36,7 +36,7 @@ public class SistemaTickets extends Application {
     
    public static void main(String []args){
        ConexionDB conexion = new ConexionDB();
-       conexion.getConnection();
+       conexion.obtenerConexion();
        launch (args);
    } 
 }
