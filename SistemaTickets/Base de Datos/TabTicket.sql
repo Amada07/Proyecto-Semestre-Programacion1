@@ -3,7 +3,7 @@ CREATE TABLE ticket (
     id_ticket SERIAL PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
     descripcion TEXT,
-    estado_id INT NOT NULL REFERENCES estado_ticket(id_estado),
+    estado_id VARCHAR(50) NOT NULL REFERENCES estado_ticket(id_estado),
     departamento_asignado_id INT NOT NULL REFERENCES departamento(id_departamento),
     usuario_creador_id INT NOT NULL REFERENCES usuario(id_usuario),
     usuario_asignado_id INT REFERENCES usuario(id_usuario),

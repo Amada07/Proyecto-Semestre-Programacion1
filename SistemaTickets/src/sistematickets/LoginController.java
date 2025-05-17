@@ -55,11 +55,11 @@ public class LoginController implements Initializable {
        String contraseña = txtContraseña.getText();
        
        boolean acceso = false;
-       if("Administrador".equals(tipo)&& "Amada".equals(usuario)&& "admin1234".equals(contraseña)){
+       if("Administrador".equals(tipo)&& "Amada".equals(usuario)&& "admin".equals(contraseña)){
            acceso = true;
-       }else if ("Tecnico".equals(tipo)&& "Pedro".equals(usuario)&& "tecnico1234".equals(contraseña)){
+       }else if ("Tecnico".equals(tipo)&& "Pedro".equals(usuario)&& "tec".equals(contraseña)){
            acceso = true;   
-       }else if ("Usuario".equals(tipo)&& "Flor".equals(usuario)&& "user1234".equals(contraseña)){
+       }else if ("Usuario".equals(tipo)&& "Flor".equals(usuario)&& "usuario".equals(contraseña)){
            acceso = true;  
    }
      if (acceso) {

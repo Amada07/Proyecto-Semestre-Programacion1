@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.sql.Connection;
 
 
 
@@ -35,8 +36,7 @@ public class SistemaTickets extends Application {
     }
     
    public static void main(String []args){
-       ConexionDB conexion = new ConexionDB();
-       conexion.obtenerConexion();
+      Connection connection = ConexionDB.obtenerConexion();
        launch (args);
    } 
 }
