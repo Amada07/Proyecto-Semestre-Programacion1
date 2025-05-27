@@ -16,9 +16,9 @@ import java.sql.SQLException;
  */
 
 public class ConexionDB {
-private static final String url = "jdbc:postgresql://ep-still-glade-a4lsy7k3-pooler.us-east-1.aws.neon.tech:5432/chinook";
+private static final String url = "jdbc:postgresql://ep-crimson-union-a5cd9wkb-pooler.us-east-2.aws.neon.tech:5432/chinook";
 private static final String user= "neondb_owner";
-private static final String password= "npg_gRyh2lnqawv7";
+private static final String password= "npg_PQlT8bUkJDp0";
  
     public  static Connection obtenerConexion()  {
        Connection conexion = null;
