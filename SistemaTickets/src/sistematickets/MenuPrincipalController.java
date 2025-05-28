@@ -73,16 +73,49 @@ public class MenuPrincipalController implements Initializable {
      @FXML private Button btnActualizar;
     @FXML private Button btnLimpiar;
     @FXML private Button btnBuscar;
-
+    
+   // Campos de la interfaz Estados 
+    @FXML private TextField txtIdEstado;
+    @FXML private TextField txtNombreEstado;
+    @FXML private TextArea txtDescripcionEstado;
+    @FXML private ComboBox<String> comboEstadoFinal;
+    @FXML private ComboBox<String> EstadosPermitidos;
+    @FXML private Button btnCrearEstado;
+     @FXML private Button btnModificarEstado;
+    @FXML private Button btnEliminarEstado;
+    @FXML private Button btnBuscarEstado;
+    
+    // controlador de Estados 
+    private GestionEstadosBD gestionEstadosBD;
+    
+    
     // Controlador para Roles y Permisos
     private GestionRolesPermisosController gestor;
-
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        // Inicializar el controlador de estados 
+        gestionEstadosBD= new GestionEstadosBD();
+        
+        // Configurar eventos de botones
+        btnCrearEstado.setOnAction(event -> crearEstado());
+        btnModificarEstado.setOnAction(event -> modificarEstado());
+        btnEliminarEstado.setOnAction(event -> eliminarEstado());
+        btnBuscarEstado.setOnAction(event -> buscarEstado());
+        btnLimpiar.setOnAction(event -> limpiarCamposEstado());
         
         // Inicializar controlador de Roles y Permisos
         gestor = new GestionRolesPermisosController();
        
+ // Definir los estados permitidos en el ComboBox
+    EstadosPermitidos.getItems().addAll("Pendiente", "En proceso", "Escalado", "Resuelto", "Cerrado");
+
+    // Definir valores del estado final
+    comboEstadoFinal.getItems().addAll("Sí", "No");
+        
+         
+         
         // Ajustar pestañas según el rol del usuario
         ajustarTabsPorRol("");
 
@@ -92,7 +125,7 @@ public class MenuPrincipalController implements Initializable {
         actualizarComboRoles();
         actualizarComboRoles();
 
-        
+       
          // Verificar si hay un rol seleccionado antes de actualizar la tabla de permisos
          String rolSeleccionado = comboRoles.getValue();
          int idRol = gestor.obtenerIdRolPorNombre(rolSeleccionado);
@@ -402,10 +435,10 @@ comboPermisos.getItems().addAll(permisosString);
         int idRol = gestor.obtenerIdRolPorNombre(rolSeleccionado);
         int idPermiso = gestor.obtenerIdPermisoPorNombre(permisoSeleccionado);
 
-        boolean exito = gestor.eliminarRelacionRolPermisoIndividual(idRol, idPermiso); // ✅ Borra relación específica
+        boolean exito = gestor.eliminarRelacionRolPermisoIndividual(idRol, idPermiso); //  Borra relación específica
         if (exito) {
             System.out.println("Relación eliminada correctamente.");
-            actualizarTablaPermisos(idRol); // ✅ Actualiza la tabla
+            actualizarTablaPermisos(idRol); // Actualiza la tabla
         } else {
             mostrarAlerta("Error", "No se pudo eliminar la relación.");
         }
@@ -565,4 +598,101 @@ btnGuardarPermiso.setOnAction(event -> guardarModificacionPermiso());
         alerta.setContentText(contenido);
         alerta.showAndWait();
     }
+ 
+    //METODO PARA ESTADOS 
+    
+
+  @FXML private void crearEstado() {
+    String nombre = txtNombreEstado.getText();
+    String descripcion = txtDescripcionEstado.getText();
+    
+    // Validar que los campos no estén vacíos
+    if (nombre.isEmpty() || nombre.length() < 3 || nombre.length() > 50) {
+        mostrarAlerta("Error", "El nombre del estado debe tener entre 3 y 50 caracteres.");
+        return;
+    }
+
+    if (EstadosPermitidos.getValue() == null || EstadosPermitidos.getValue().isEmpty() ){
+        mostrarAlerta("Error", "Debes seleccionar al menos un estado permitido.");
+        return;
+    }
+
+    // Obtener el valor correcto del ComboBox
+    boolean estadoFinal = "Sí".equals(comboEstadoFinal.getValue());  
+    String estadosPermitidos = EstadosPermitidos.getValue(); 
+    
+    if (gestionEstadosBD.crearEstado(nombre, descripcion, estadoFinal, estadosPermitidos)) {
+          System.out.println("Estado Creado Correctamente.");
+        limpiarCamposEstado();
+    } else {
+        mostrarAlerta("Error", "No se pudo crear el estado.");
+    }
 }
+
+    @FXML private void modificarEstado() {
+        int idEstado = Integer.parseInt(txtIdEstado.getText());
+        String nombre = txtNombreEstado.getText();
+        String descripcion = txtDescripcionEstado.getText();
+        
+        boolean estadoFinal = "Sí".equals(comboEstadoFinal.getValue());  
+        String estadosPermitidos = EstadosPermitidos.getValue();
+        
+        if (gestionEstadosBD.actualizarEstado(idEstado, nombre, descripcion, estadoFinal, estadosPermitidos)) {
+              System.out.println("Estado modificado correctamente.");
+            limpiarCamposEstado();
+        } else {
+            mostrarAlerta("Error", "No se pudo actualizar el estado.");
+        }
+    }
+
+    @FXML private void eliminarEstado() {
+        int idEstado = Integer.parseInt(txtIdEstado.getText());
+        
+        if (gestionEstadosBD.eliminarEstado(idEstado)) {
+             System.out.println("Estado eliminado Correctamente.");
+            limpiarCamposEstado();
+        } else {
+            mostrarAlerta("Error", "No se pudo eliminar el estado.");
+        }
+    }
+
+@FXML private void buscarEstado() {
+    try {
+        int idEstado = Integer.parseInt(txtIdEstado.getText().trim()); // Evita espacios inesperados
+        Estado estado = gestionEstadosBD.obtenerEstadoPorId(idEstado);
+
+        if (estado != null) {
+            System.out.println("Estado encontrado: " + estado.getNombre()); // Depuración
+
+            txtNombreEstado.setText(estado.getNombre());
+            txtDescripcionEstado.setText(estado.getDescripcion());
+
+            comboEstadoFinal.setValue(estado.isEstadoFinal() ? "Sí" : "No"); 
+            
+            // Manejo correcto de listas en el ComboBox
+            EstadosPermitidos.getItems().clear();
+            EstadosPermitidos.getItems().addAll(estado.getEstadosPermitidos());
+        } else {
+            mostrarAlerta("Error", "Estado no encontrado.");
+            limpiarCamposEstado(); // Limpia si no se encuentra el estado
+        }
+    } catch (NumberFormatException e) {
+        mostrarAlerta("Error", "ID de estado inválido.");
+        limpiarCamposEstado();
+    }
+}
+
+
+    @FXML private void limpiarCamposEstado() {
+        txtIdEstado.clear();
+        txtNombreEstado.clear();
+        txtDescripcionEstado.clear();
+        comboEstadoFinal.setValue(null);
+        
+        //Restaura los valores de Estados permitidos
+        EstadosPermitidos.getItems().clear();
+        EstadosPermitidos.getItems().addAll("Pendiente","En Proceso","Escalonado","Resuelto","Cerrado");
+    }
+   
+        
+    }
